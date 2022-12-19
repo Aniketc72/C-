@@ -1,0 +1,37 @@
+﻿
+class Searching
+{
+    public static void Main()
+    {
+        int[] a = new int[100];
+        int flag = 0;
+        //intpos = 0;
+        Console.WriteLine("Enter number of elements you want to hold in the array ? ");
+        int x = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("-------------------------");
+        Console.WriteLine("\n Enter array elements \n");
+        for (int i = 0; i < x; i++)
+        {
+            a[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine("-------------------------");
+        Console.WriteLine("Enter Search element\n");
+        int x2 = Convert.ToInt32(Console.ReadLine());
+        for (int i = 0; i < x; i++)
+        {
+            if (a[i] == x2)
+            {
+                Console.WriteLine("-------------------------");
+                Console.WriteLine("Search successful");
+                Console.WriteLine("Element{0} found at locationn{1}\n", x2, i + 1);
+                flag++;
+                break;
+            }
+        }
+        if (flag == 0)
+        {
+            Console.WriteLine("Search unsuccessful");
+        }
+        Console.ReadLine();
+    }
+}
