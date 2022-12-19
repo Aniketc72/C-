@@ -1,0 +1,73 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.ComponentModel;
+usingSystem.Data;
+usingSystem.Drawing;
+usingSystem.Linq;
+usingSystem.Text;
+usingSystem.Windows.Forms;
+namespaceCheckbox_and_Radio_Button
+{
+publicpartialclassForm1 : Form
+ {
+public Form1()
+ {
+InitializeComponent();
+ }
+privatevoid button1_Click(object sender, EventArgs e)
+ {
+string movies = "";
+if (checkBox1.Checked)
+ {
+movies = movies + checkBox1.Text+Environment.NewLine; 
+ }
+if (checkBox2.Checked)
+ {
+movies = movies + checkBox2.Text+Environment.NewLine;
+ }
+if (checkBox3.Checked)
+ {
+movies = movies + checkBox3.Text+Environment.NewLine;
+ }
+if (checkBox4.Checked)
+ {
+movies = movies + checkBox4.Text + Environment.NewLine;
+ }
+MessageBox.Show(movies);
+ }
+privatevoid button2_Click(object sender, EventArgs e)
+ {
+stringChosenMovie = "";
+if (radioButton1.Checked)
+ {
+ChosenMovie = radioButton1.Text;
+ }
+if (radioButton2.Checked)
+ {
+ChosenMovie = radioButton2.Text;
+ }
+if (radioButton3.Checked)
+ {
+ChosenMovie = radioButton3.Text;
+ }
+if (radioButton4.Checked)
+ {
+ChosenMovie = radioButton4.Text;
+ }
+MessageBox.Show(ChosenMovie);
+ }
+privatevoid button3_Click(object sender, EventArgs e)
+ {
+varsrn=txtsrn.Text;
+var name=txtname.Text;
+var mobile=txtmobile.Text;
+var email=txtmobile.Text;
+var course = combocourse.SelectedItem;
+var details = (srn+Environment.NewLine) + (name+Environment.NewLine) 
++ (mobile+Environment.NewLine) + (email+Environment.NewLine) + 
+(course+Environment.NewLine);
+MessageBox.Show("My Details Are:"+details);
+ }
+ }
+}
+g
