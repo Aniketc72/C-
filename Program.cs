@@ -1,0 +1,13 @@
+﻿class program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Number of command line arguements:" + args.Length);
+        Console.WriteLine("command line arguement:\t");
+        for(int i = 0; i < args.Length; i++)
+        {
+            Console.Write(args[i] + "\t");
+        }
+        Console.ReadLine();
+    }
+}
