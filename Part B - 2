@@ -1,0 +1,58 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.ComponentModel;
+usingSystem.Data;
+usingSystem.Drawing;
+usingSystem.Linq;
+usingSystem.Text;
+usingSystem.Windows.Forms;
+namespaceKeyoard_and_Mouse_Events
+{
+publicpartialclassForm1 : Form
+ {
+public Form1()
+ {
+InitializeComponent();
+ }
+privatevoid textBox1_KeyDown(object sender, KeyEventArgs e)
+ {
+if (e.KeyCode == Keys.Enter)
+ {
+MessageBox.Show("Enter Key Down");
+ }
+ }
+privatevoid textBox1_KeyPress(object sender, KeyPressEventArgs e)
+ {
+if (e.KeyChar == 13)
+ {
+MessageBox.Show("Enter Key is pressed");
+ }
+ }
+privatevoid textBox1_KeyUp(object sender, KeyEventArgs e)
+ {
+if (e.KeyCode == Keys.Enter)
+ {
+MessageBox.Show("Enter Key Up");
+ }
+ }
+privatevoid button1_MouseEnter(object sender, EventArgs e)
+ {
+ button1.Height += 30;
+ button1.Width += 30;
+ button1.Top -= 15;
+ button1.Left -= 15;
+ }
+privatevoid button1_MouseLeave(object sender, EventArgs e)
+ {
+ button1.Height -= 30;
+ button1.Width -= 30;
+ button1.Top += 15;
+ button1.Left += 15;
+ }
+privatevoid button2_MouseClick(object sender, MouseEventArgs e)
+ {
+MessageBox.Show(String.Format("Clicked at point({0},{1})", e.X, 
+e.Y));
+ }
+ }
+}
